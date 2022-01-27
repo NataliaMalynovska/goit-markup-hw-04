@@ -83,7 +83,7 @@ p {
 }
 
 .page-nav {
-  margin-right: auto;
+  margin-right: 305px;
 
   font-weight: 500;
   font-size: 14px;
@@ -100,6 +100,9 @@ p {
 }
 .nav-item:not(:last-child) {
   margin-right: 50px;
+}
+.ad-list > li:not(:last-child) {
+  margin-right: 30px;
 }
 .nav-link {
   padding-top: 32px;
@@ -119,7 +122,16 @@ p {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+.adress-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 .adress-link:hover,
 .adress-link:focus,
 .nav-link:hover,
@@ -200,8 +212,11 @@ p {
   height: 120px;
   background: var(--background-light);
   border-radius: 4px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .features-title {
   margin-top: 30px;
   width: 270px;
@@ -288,27 +303,67 @@ p {
   color: var(--primary-text-color);
   text-align: center;
 }
-.team-link {
+.card-link {
+  margin-top: 16px;
+}
+.card-link-list {
   display: flex;
+  justify-content: center;
+}
+.card-link-item + .card-link-item {
+  margin-left: 10px;
 }
 .social-link {
   width: 44px;
   height: 44px;
-  background-color: teal;
   border-radius: 50%;
+  background-color: var(--main-background);
+
   cursor: pointer;
+
   display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text-color);
 }
+.social-link-logo {
+  fill: currentColor;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--interactiv-color);
+  color: var(--alternative-text-color);
+}
+
 /*-----------Постоянные клиенты------------- */
 .client-list {
   margin-top: 50px;
 }
-.client-img {
+.client-item + .client-item {
+  margin-left: 30px;
+}
+.client-card {
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.client-icon {
+  fill: var(--primary-text-color);
+}
+
+.client-card:hover,
+.client-card:focus .client-icon {
+  border: 1px solid #2196f3;
+}
+.client-icon:hover {
+  fill: var(--accent-color);
+}
+
 /*-------------Футер-------------------- */
 .footer {
   padding-top: 60px;
@@ -384,8 +439,8 @@ p {
 .footer-join-list {
   margin-top: 20px;
 }
-.join-item {
-  justify-content: space-between;
+.join-item + .join-item {
+  margin-left: 10px;
 }
 .join-link {
   width: 44px;
@@ -396,6 +451,11 @@ p {
   align-items: center;
   justify-content: center;
 }
+.join-link:hover,
+.join-link:focus {
+  background-color: var(--interactiv-color);
+}
+
 .join-icon {
   fill: var(--alternative-text-color);
 }
@@ -416,7 +476,12 @@ p {
 .btn-item:last-child {
   margin-right: 0;
 }
-
+.btn-item:hover,
+.btn-item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
 .portfolio-btn {
   padding: 6px 22px;
   border: none;
@@ -458,6 +523,13 @@ p {
 }
 .portfolio-item:nth-child(-n + 3) {
   margin-top: 0px;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-card {
   padding: 20px 24px;
