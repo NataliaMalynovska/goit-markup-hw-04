@@ -2,7 +2,7 @@
   --main-text-color: #212121;
   --primary-text-color: #757575;
   --alternative-text-color: #ffffff;
-  --accent-color: #2196f3;
+  --button-color: #2196f3;
   --main-background: #ffffff;
   --background-dark: #2f303a;
   --background-light: #f5f4fa;
@@ -70,7 +70,7 @@ p {
   padding-bottom: 24px;
   margin-right: 93px;
 
-  color: var(--accent-color);
+  color: var(--button-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -136,10 +136,10 @@ p {
 .adress-link:focus,
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--accent-color);
+  color: var(--button-color);
 }
 .current {
-  color: var(--accent-color);
+  color: var(--button-color);
 }
 /*---------------------Герой---------------------*/
 .section-hero {
@@ -184,7 +184,7 @@ p {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  background: var(--accent-color);
+  background: var(--button-color);
   color: var(--alternative-text-color);
   cursor: pointer;
 }
@@ -195,6 +195,7 @@ p {
 /*-----------------особенности-----------------*/
 .section-features {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .section-features-title {
@@ -236,11 +237,10 @@ p {
   letter-spacing: 0.03em;
 }
 /*----------------Чем мы занимаемся---------------*/
-.section-work,
-.section-client {
-  padding-top: 94px;
+.section-work {
   padding-bottom: 94px;
 }
+
 .work-title,
 .team-title,
 .client-title {
@@ -289,8 +289,7 @@ p {
 }
 
 .team-card {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 .team-name {
   font-weight: 500;
@@ -303,10 +302,9 @@ p {
   color: var(--primary-text-color);
   text-align: center;
 }
-.card-link {
-  margin-top: 16px;
-}
+
 .card-link-list {
+  margin-top: 16px;
   display: flex;
   justify-content: center;
 }
@@ -331,37 +329,49 @@ p {
 }
 .social-link:hover,
 .social-link:focus {
-  background-color: var(--interactiv-color);
+  background-color: var(--button-color);
   color: var(--alternative-text-color);
 }
 
 /*-----------Постоянные клиенты------------- */
+.section-client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .client-list {
   margin-top: 50px;
-}
-.client-item + .client-item {
-  margin-left: 30px;
-}
-.client-card {
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.client-icon {
-  fill: var(--primary-text-color);
+
+.client-item + .client-item {
+  margin-left: 30px;
+}
+.client-link {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+
+  color: var(--primary-text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.client-card:hover,
-.client-card:focus .client-icon {
-  border: 1px solid #2196f3;
+.client-icon {
+  fill: currentColor;
 }
-.client-icon:hover {
-  fill: var(--accent-color);
+.client-link:focus {
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
+}
+.client-link:hover {
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
 }
 
 /*-------------Футер-------------------- */
@@ -379,7 +389,7 @@ p {
   margin-right: 70px;
 }
 .logo-footer {
-  color: var(--accent-color);
+  color: var(--button-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -425,7 +435,7 @@ p {
 .footer-mail-tel:hover,
 .footer-adr:focus,
 .footer-mail-tel:focus {
-  color: var(--accent-color);
+  color: var(--button-color);
 }
 .footer-join {
   font-weight: 700;
@@ -453,7 +463,7 @@ p {
 }
 .join-link:hover,
 .join-link:focus {
-  background-color: var(--interactiv-color);
+  background-color: var(--button-color);
 }
 
 .join-icon {
@@ -500,7 +510,13 @@ p {
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   color: var(--alternative-text-color);
-  background-color: var(--accent-color);
+  background-color: var(--button-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.current-btn {
+  color: var(--alternative-text-color);
+  background: var(--button-color);
 }
 
 .portfolio-list {
@@ -509,10 +525,7 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
-.current-btn {
-  color: var(--alternative-text-color);
-  background: var(--accent-color);
-}
+
 .portfolio-item {
   margin-left: 30px;
   margin-top: 30px;
@@ -524,13 +537,17 @@ p {
 .portfolio-item:nth-child(-n + 3) {
   margin-top: 0px;
 }
-
+.portfolio-link {
+  color: inherit;
+  text-decoration: none;
+}
 .portfolio-item:hover,
 .portfolio-item:focus {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .portfolio-card {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
