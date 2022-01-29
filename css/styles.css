@@ -7,6 +7,7 @@
   --background-dark: #2f303a;
   --background-light: #f5f4fa;
   --interactiv-color: #188ce8;
+  --link-color: #afb1b8;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -322,7 +323,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-text-color);
+  color: var(--link-color);
 }
 .social-link-logo {
   fill: currentColor;
@@ -355,7 +356,7 @@ p {
   width: 170px;
   height: 92px;
 
-  color: var(--primary-text-color);
+  color: var(--link-color);
 
   display: flex;
   justify-content: center;
@@ -540,9 +541,10 @@ p {
 .portfolio-link {
   color: inherit;
   text-decoration: none;
+  display: block;
 }
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
